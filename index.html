@@ -3,24 +3,24 @@
 <head>
 	<title>Address Book</title>
 	<link rel="stylesheet" type="text/css" href="./lib/bower_components/bootstrap/dist/css/bootstrap.css">
-	<link rel="stylesheet" href="./styles/main.css">
+	<!-- <link rel="stylesheet" href="./styles/main.css"> -->
 </head>
-<body ng-app="AddressBook">
+	<body ng-app="AddressBookApp">
 
-<h1>Address Book</h1>
+		<h1>Address Book</h1>
 
-<div ng-controller="AddressControl">
-	{{something}}
-</div>
+		<div ng-controller="AddressControl">
+			{{addresses}}
+		</div>
 
-<script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
-<script type="text/javascript" src="./lib/bower_components/jquery/dist/jquery.js"></script>
-<script type="text/javascript" src="./lib/bower_components/bootstrap/dist/js/bootstrap.js"></script>
-<script type="text/javascript" src="./lib/bower_components/angular/angular.min.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+		<script type="text/javascript" src="./lib/bower_components/jquery/dist/jquery.js"></script>
+		<script type="text/javascript" src="./lib/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+		<script type="text/javascript" src="./lib/bower_components/angular/angular.min.js"></script>
 
-<script type="text/javascript" src="./javascripts/app.js"></script>
-<script type="text/javascript" src="./javascripts/AppConstants.js"></script>
-<script type="text/javascript" src="./javascripts/main.js"></script>
+		<script type="text/javascript" src="./javascripts/app.js"></script>
+		<script type="text/javascript" src="./javascripts/AppConstants.js"></script>
+		<script type="text/javascript" src="./javascripts/main.js"></script>
 
-</body>
+	</body>
 </html>
