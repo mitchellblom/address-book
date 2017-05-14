@@ -3,7 +3,7 @@
             "address0": {
                 "given_name": "Alejandro",
                 "surname": "Cienfuegos",
-                "class": "Friend",
+                "relationship": "Friend",
                 "address": "1234 1st Ave S",
                 "city": "London",
                 "state": "Greater London",
@@ -13,7 +13,7 @@
             "address1": {
                 "given_name": "Diana",
                 "surname": "Blom",
-                "class": "Family",
+                "relationship": "Family",
                 "address": "5432 Lemmon Ave",
                 "city": "Dallas",
                 "state": "TX",
@@ -23,7 +23,7 @@
             "address2": {
                 "given_name": "Marco",
                 "surname": "Augliera",
-                "class": "Friend",
+                "relationship": "Friend",
                 "address": "1001 Fratelli Ct",
                 "city": "Trento",
                 "state": "Trentino",
@@ -33,7 +33,7 @@
             "address3": {
                 "given_name": "Sam",
                 "surname": "Sonite",
-                "class": "Other",
+                "relationship": "Other",
                 "address": "5255 Hickory Hollow Pkwy",
                 "city": "Antioch",
                 "state": "TN",

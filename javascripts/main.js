@@ -3,7 +3,7 @@ app.run((FIREBASE_CONFIG) => {
 });
 
 app.controller("AddressControl", ($http, $q, $scope, FIREBASE_CONFIG) => {
-	$scope.addresses = "Loading addresses...";
+	$scope.addresses = [];
 	$scope.showListView = true;
 
 	$scope.newContact = () => {
@@ -32,7 +32,7 @@ app.controller("AddressControl", ($http, $q, $scope, FIREBASE_CONFIG) => {
 		});
 	};
 
-	let getAddressesToDom = () => {
+	let getAddressesThenWriteToDom = () => {
 		getAddressesFromFb().then((addresses) => {
 			$scope.addresses = addresses;
 		}).catch((error) => {
@@ -40,6 +40,29 @@ app.controller("AddressControl", ($http, $q, $scope, FIREBASE_CONFIG) => {
 		});
 	};
 
-	getAddressesToDom();
+	getAddressesThenWriteToDom();
+
+	let postNewContact = (newContact) => {
+		console.log(newContact);
+		return $q((resolve, reject) => {
+			$http.post(`${FIREBASE_CONFIG.databaseURL}/addresses.json`, JSON.stringify(newContact))
+				.then((results) => {
+					resolve(results);
+				}).catch((error) => {
+					reject(error);
+				});
+		});
+	};
+
+	$scope.addNewContact = () => {
+		console.log("clicked add");
+		postNewContact($scope.newContact).then(() => {
+			$scope.newContact = {};
+			$scope.showListView = true;
+			getAddressesThenWriteToDom();
+		}).catch((error) => {
+			console.log(error);
+		});
+	};
 
 });
