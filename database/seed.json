@@ -1,40 +1,44 @@
 {
     "addresses": {
             "address0": {
-                "given name": "Alejandro",
-                "surname": "Sansone",
+                "given_name": "Alejandro",
+                "surname": "Cienfuegos",
                 "class": "Friend",
-                "street address": "1234 1st Ave S",
+                "address": "1234 1st Ave S",
                 "city": "London",
                 "state": "Greater London",
+                "zip": "09876",
                 "country": "United Kingdom"
             },
             "address1": {
-                "given name": "Diana",
+                "given_name": "Diana",
                 "surname": "Blom",
                 "class": "Family",
-                "street address": "5432 Lemmon Ave",
+                "address": "5432 Lemmon Ave",
                 "city": "Dallas",
                 "state": "TX",
+                "zip": "75022",
                 "country": "United States"
             },
             "address2": {
-                "given name": "Marco",
+                "given_name": "Marco",
                 "surname": "Augliera",
                 "class": "Friend",
-                "street address": "1001 Fratelli Ct",
+                "address": "1001 Fratelli Ct",
                 "city": "Trento",
                 "state": "Trentino",
+                "zip": "LK987",
                 "country": "Italy"
             },
             "address3": {
-                "given name": "Sam",
+                "given_name": "Sam",
                 "surname": "Sonite",
                 "class": "Other",
-                "street address": "5255 Hickory Hollow Pkwy",
+                "address": "5255 Hickory Hollow Pkwy",
                 "city": "Antioch",
                 "state": "TN",
-                "country": "USA"
+                "zip": "37013",
+                "country": "United States"
             }
     }
 }
