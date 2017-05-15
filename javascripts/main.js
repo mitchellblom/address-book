@@ -5,12 +5,13 @@ app.run((FIREBASE_CONFIG) => {
 app.controller("AddressControl", ($http, $q, $scope, FIREBASE_CONFIG) => {
 	$scope.addresses = [];
 	$scope.showListView = true;
+	$scope.newContact = {};
 
-	$scope.newContact = () => {
+	$scope.newContactView = () => {
 		$scope.showListView = false;
 	};
 
-	$scope.allContacts = () => {
+	$scope.allContactsView = () => {
 		$scope.showListView = true;
 	};
 
@@ -42,10 +43,10 @@ app.controller("AddressControl", ($http, $q, $scope, FIREBASE_CONFIG) => {
 
 	getAddressesThenWriteToDom();
 
-	let postNewContact = (newContact) => {
-		console.log(newContact);
+	let postNewContact = (newContactInfo) => {
+		console.log(newContactInfo);
 		return $q((resolve, reject) => {
-			$http.post(`${FIREBASE_CONFIG.databaseURL}/addresses.json`, JSON.stringify(newContact))
+			$http.post(`${FIREBASE_CONFIG.databaseURL}/addresses.json`, JSON.stringify(newContactInfo))
 				.then((results) => {
 					resolve(results);
 				}).catch((error) => {
@@ -56,6 +57,7 @@ app.controller("AddressControl", ($http, $q, $scope, FIREBASE_CONFIG) => {
 
 	$scope.addNewContact = () => {
 		console.log("clicked add");
+		console.log("scope of newContact", $scope.newContact);
 		postNewContact($scope.newContact).then(() => {
 			$scope.newContact = {};
 			$scope.showListView = true;
