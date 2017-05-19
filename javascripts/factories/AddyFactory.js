@@ -42,11 +42,32 @@ app.factory("AddyFactory", function($http, $q, FIREBASE_CONFIG) {
     });
   };
 
+  let editContact = (item) => {
+    return $q((resolve, reject) => {
+      $http.put(`${FIREBASE_CONFIG.databaseURL}/items/${item.id}.json`, 
+        JSON.stringify({
+        	given_name: item.given_name,
+        	surname: item.surname,
+          address: item.address,
+          city: item.city,
+          state: item.state,
+          zip: item.zip,
+          country: item.country
+        })
+    	)
+      	.then((results) => {
+              resolve(results);
+          }).catch((error) => {
+              reject(error);
+          });
+        });
+  };
 
   return {
       getAddressesFromFb:getAddressesFromFb,
       getSingleAddy:getSingleAddy,
-      postNewContact:postNewContact
+      postNewContact:postNewContact,
+      editContact:editContact
   };
 
 
