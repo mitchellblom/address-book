@@ -1,12 +1,11 @@
-app.controller("AddyNewCtrl", function($http, $location, $q, $scope, FIREBASE_CONFIG, ItemFactory){
+app.controller("AddyNewCtrl", function($http, $location, $q, $scope, FIREBASE_CONFIG, AddyFactory){
 
 	$scope.addNewContact = () => {
 		console.log("clicked add");
 		console.log("scope of newContact", $scope.newContact);
-		postNewContact($scope.newContact).then(() => {
+		AddyFactory.postNewContact($scope.newContact).then(() => {
 			$scope.newContact = {};
-			$scope.showListView = true;
-			getAddressesThenWriteToDom();
+			$location.url("/addy/list");
 		}).catch((error) => {
 			console.log(error);
 		});

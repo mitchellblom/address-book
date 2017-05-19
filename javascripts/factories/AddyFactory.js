@@ -21,7 +21,7 @@ app.factory("AddyFactory", function($http, $q, FIREBASE_CONFIG) {
 
   let getSingleAddy = (id) => {
     return $q((resolve, reject) => {
-       $http.get(`${FIREBASE_CONFIG.databaseURL}/items/${id}.json`)
+       $http.get(`${FIREBASE_CONFIG.databaseURL}/addresses/${id}.json`)
         .then((results) => {
           results.data.id = id;
           resolve(results);
@@ -31,12 +31,22 @@ app.factory("AddyFactory", function($http, $q, FIREBASE_CONFIG) {
     });
   };
 
-
+  let postNewContact = (newAddy) => {
+    return $q((resolve, reject) => {
+      $http.post(`${FIREBASE_CONFIG.databaseURL}/addresses.json`, JSON.stringify(newAddy))
+        .then((resultz) => {
+            resolve(resultz);
+        }).catch((error) => {
+            reject(error);
+        });
+    });
+  };
 
 
   return {
       getAddressesFromFb:getAddressesFromFb,
-      getSingleAddy:getSingleAddy
+      getSingleAddy:getSingleAddy,
+      postNewContact:postNewContact
   };
 
 
