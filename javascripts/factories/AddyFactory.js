@@ -4,9 +4,8 @@ app.factory("AddyFactory", function($http, $q, FIREBASE_CONFIG) {
 		let addresses = [];
 		return $q((resolve, reject) => {
 			$http.get(`${FIREBASE_CONFIG.databaseURL}/addresses.json`)
-				.then((fbItems) => {
-					var addressCollection = fbItems.data;
-					console.log(addressCollection);
+				.then((fbAddys) => {
+					var addressCollection = fbAddys.data;
 					Object.keys(addressCollection).forEach((key) => {
 						addressCollection[key].id = key;
 						addresses.push(addressCollection[key]);
@@ -20,6 +19,7 @@ app.factory("AddyFactory", function($http, $q, FIREBASE_CONFIG) {
 	};
 
   let getSingleAddy = (id) => {
+  	console.log("getSingleAddy firing", id);
     return $q((resolve, reject) => {
        $http.get(`${FIREBASE_CONFIG.databaseURL}/addresses/${id}.json`)
         .then((results) => {

@@ -1,8 +1,8 @@
 <ul>
-	<li>{{address.given_name}} {{address.surname}}</li>
-	<li>{{address.class}}</li>
-	<li>{{address.address}}</li>
-	<li>{{address.city}}, {{address.state}}, {{address.zip}}</li>
-	<li>{{address.country}}</li>
+	<li>{{selectedAddy.given_name}} {{selectedAddy.surname}}</li>
+	<li>{{selectedAddy.class}}</li>
+	<li>{{selectedAddy.address}}</li>
+	<li>{{selectedAddy.city}}, {{selectedAddy.state}}, {{selectedAddy.zip}}</li>
+	<li>{{selectedAddy.country}}</li>
 </ul>
-<button class="btn btn-warning"><a ng-href="#!/item/edit/{{selectedItem.id}}">Edit</a></button>
+<button class="btn btn-default"><a ng-href="#!/addy/edit/{{selectedAddy.id}}">Edit</a></button>
