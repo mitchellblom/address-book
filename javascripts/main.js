@@ -1,47 +1,47 @@
-app.run((FIREBASE_CONFIG) => {
-	firebase.initializeApp(FIREBASE_CONFIG); 
-});
+// app.run((FIREBASE_CONFIG) => {
+// 	firebase.initializeApp(FIREBASE_CONFIG); 
+// });
 
 app.controller("AddressControl", ($http, $q, $scope, FIREBASE_CONFIG) => {
 	$scope.addresses = [];
 	$scope.showListView = true;
 	$scope.newContact = {};
 
-	$scope.newContactView = () => {
-		$scope.showListView = false;
-	};
+	// $scope.newContactView = () => {
+	// 	$scope.showListView = false;
+	// };
 
-	$scope.allContactsView = () => {
-		$scope.showListView = true;
-	};
+	// $scope.allContactsView = () => {
+	// 	$scope.showListView = true;
+	// };
 
-	let getAddressesFromFb = () => {
-		let addresses = [];
-		return $q((resolve, reject) => {
-			$http.get(`${FIREBASE_CONFIG.databaseURL}/addresses.json`)
-				.then((fbItems) => {
-					var addressCollection = fbItems.data;
-					Object.keys(addressCollection).forEach((key) => {
-						addressCollection[key].id = key;
-						addresses.push(addressCollection[key]);
-					});
-					resolve(addresses);
-				})
-				.catch((error) => {
-					reject(error);
-				});
-		});
-	};
+	// let getAddressesFromFb = () => {
+	// 	let addresses = [];
+	// 	return $q((resolve, reject) => {
+	// 		$http.get(`${FIREBASE_CONFIG.databaseURL}/addresses.json`)
+	// 			.then((fbItems) => {
+	// 				var addressCollection = fbItems.data;
+	// 				Object.keys(addressCollection).forEach((key) => {
+	// 					addressCollection[key].id = key;
+	// 					addresses.push(addressCollection[key]);
+	// 				});
+	// 				resolve(addresses);
+	// 			})
+	// 			.catch((error) => {
+	// 				reject(error);
+	// 			});
+	// 	});
+	// };
 
-	let getAddressesThenWriteToDom = () => {
-		getAddressesFromFb().then((addresses) => {
-			$scope.addresses = addresses;
-		}).catch((error) => {
-			console.log("get error", error);
-		});
-	};
+	// let getAddressesThenWriteToDom = () => {
+	// 	AddyFactory.getAddressesFromFb().then((addresses) => {
+	// 		$scope.addresses = addresses;
+	// 	}).catch((error) => {
+	// 		console.log("get error", error);
+	// 	});
+	// };
 
-	getAddressesThenWriteToDom();
+	// getAddressesThenWriteToDom();
 
 	let postNewContact = (newContactInfo) => {
 		console.log(newContactInfo);
