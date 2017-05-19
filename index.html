@@ -7,69 +7,78 @@
 </head>
 	<body ng-app="AddressBookApp">
 
-	<h1>Scrollodex</h1>
+		<h1>Scrollodex</h1>
 
-	<div ng-controller="AddressControl">
+		<div ng-controller="AddressControl">
 
-		<div class="row">
-			<div class="col-xs-6 col-xs-offset-3">
-				<button class="col-xs-6 btn btn-default" ng-click="newContactView()">New Contact</button>
-				<button class="col-xs-6 btn btn-default" ng-click="allContactsView()">All Contacts</button>
-			</div>
-		</div>
-
-		<div ng-show="showListView">
-				<div ng-repeat="address in addresses">
-					<ul>
-						<li>{{address.given_name}} {{address.surname}}</li>
-						<li>{{address.class}}</li>
-						<li>{{address.address}}</li>
-						<li>{{address.city}}, {{address.state}}, {{address.zip}}</li>
-						<li>{{address.country}}</li>
-					</ul>
+			<div class="row">
+				<div class="col-xs-6 col-xs-offset-3">
+					<button class="col-xs-6 btn btn-default" ng-click="newContactView()">New Contact</button>
+					<button class="col-xs-6 btn btn-default" ng-click="allContactsView()">All Contacts</button>
 				</div>
 			</div>
 
-		<div ng-show="!showListView">
-			<h3>Add New Contact</h3>
-			<form class="newContactForm">
-		        <div class="form-group">
-		            <label>Name</label>
-		            <input type="text" class="form-control" placeholder="First" ng-model="newContact.given_name" />
-		            <input type="text" class="form-control" placeholder="Last" ng-model="newContact.surname" />
-		        </div>
-		        <div class="form-group">
-		            <label>Address</label>
-		            <input type="text" class="form-control" placeholder="Street" ng-model="newContact.address"/>
-		            <input type="text" class="form-control" placeholder="City" ng-model="newContact.city"/>
-		            <input type="text" class="form-control" placeholder="State" ng-model="newContact.state"/>
-		            <input type="text" class="form-control" placeholder="Zip" ng-model="newContact.zip"/>
-		            <input type="text" class="form-control" placeholder="Country" ng-model="newContact.country"/>
-		        </div>
-				<div class="form-group">
-					<label>Relationship</label>
-					<select name="Relationship" ng-model="newContact.relationship">
-						<option value="Friend">Friend</option> 
-					  	<option value="Family">Family</option>
-					  	<option value="Other">Other</option>
-					</select>
+			<div ng-show="showListView">
+					<div ng-repeat="address in addresses">
+						<ul>
+							<li>{{address.given_name}} {{address.surname}}</li>
+							<li>{{address.class}}</li>
+							<li>{{address.address}}</li>
+							<li>{{address.city}}, {{address.state}}, {{address.zip}}</li>
+							<li>{{address.country}}</li>
+						</ul>
+					</div>
 				</div>
 
-		        <button class="btn btn-default" ng-click="addNewContact()">Submit</button>
-		    </form>
+			<div ng-show="!showListView">
+				<h3>Add New Contact</h3>
+				<form class="newContactForm">
+			        <div class="form-group">
+			            <label>Name</label>
+			            <input type="text" class="form-control" placeholder="First" ng-model="newContact.given_name" />
+			            <input type="text" class="form-control" placeholder="Last" ng-model="newContact.surname" />
+			        </div>
+			        <div class="form-group">
+			            <label>Address</label>
+			            <input type="text" class="form-control" placeholder="Street" ng-model="newContact.address"/>
+			            <input type="text" class="form-control" placeholder="City" ng-model="newContact.city"/>
+			            <input type="text" class="form-control" placeholder="State" ng-model="newContact.state"/>
+			            <input type="text" class="form-control" placeholder="Zip" ng-model="newContact.zip"/>
+			            <input type="text" class="form-control" placeholder="Country" ng-model="newContact.country"/>
+			        </div>
+					<div class="form-group">
+						<label>Relationship</label>
+						<select name="Relationship" ng-model="newContact.relationship">
+							<option value="Friend">Friend</option> 
+						  	<option value="Family">Family</option>
+						  	<option value="Other">Other</option>
+						</select>
+					</div>
+
+			        <button class="btn btn-default" ng-click="addNewContact()">Submit</button>
+			    </form>
+
+			</div>
 
 		</div>
-
-	</div>
 
 		<script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
 		<script type="text/javascript" src="./lib/bower_components/jquery/dist/jquery.js"></script>
 		<script type="text/javascript" src="./lib/bower_components/bootstrap/dist/js/bootstrap.js"></script>
 		<script type="text/javascript" src="./lib/bower_components/angular/angular.min.js"></script>
+		<script type="text/javascript" src="./lib/bower_components/angular-route/angular-route.min.js"></script>
 
 		<script type="text/javascript" src="./javascripts/app.js"></script>
 		<script type="text/javascript" src="./javascripts/AppConstants.js"></script>
 		<script type="text/javascript" src="./javascripts/main.js"></script>
+
+		<script type="text/javascript" src="./javascripts/factories/AddyFactory.js"></script>
+
+		<script type="text/javascript" src="./javascripts/controllers/AddyEditCtrl.js"></script>
+		<script type="text/javascript" src="./javascripts/controllers/AddyListCtrl.js"></script>
+		<script type="text/javascript" src="./javascripts/controllers/AddyNewCtrl.js"></script>
+		<script type="text/javascript" src="./javascripts/controllers/AddyViewCtrl.js"></script>
+		<script type="text/javascript" src="./javascripts/controllers/NavCtrl.js"></script>
 
 	</body>
 </html>
