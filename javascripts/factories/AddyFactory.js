@@ -44,7 +44,7 @@ app.factory("AddyFactory", function($http, $q, FIREBASE_CONFIG) {
 
   let editContact = (item) => {
     return $q((resolve, reject) => {
-      $http.put(`${FIREBASE_CONFIG.databaseURL}/items/${item.id}.json`, 
+      $http.put(`${FIREBASE_CONFIG.databaseURL}/addresses/${item.id}.json`, 
         JSON.stringify({
         	given_name: item.given_name,
         	surname: item.surname,
