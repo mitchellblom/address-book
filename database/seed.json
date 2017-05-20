@@ -1,0 +1,44 @@
+{
+    "addresses": {
+            "address0": {
+                "given_name": "Alejandro",
+                "surname": "Cienfuegos",
+                "relationship": "Friend",
+                "address": "1234 1st Ave S",
+                "city": "London",
+                "state": "Greater London",
+                "zip": "09876",
+                "country": "United Kingdom"
+            },
+            "address1": {
+                "given_name": "Diana",
+                "surname": "Blom",
+                "relationship": "Family",
+                "address": "5432 Lemmon Ave",
+                "city": "Dallas",
+                "state": "TX",
+                "zip": "75022",
+                "country": "United States"
+            },
+            "address2": {
+                "given_name": "Marco",
+                "surname": "Augliera",
+                "relationship": "Friend",
+                "address": "1001 Fratelli Ct",
+                "city": "Trento",
+                "state": "Trentino",
+                "zip": "LK987",
+                "country": "Italy"
+            },
+            "address3": {
+                "given_name": "Sam",
+                "surname": "Sonite",
+                "relationship": "Other",
+                "address": "5255 Hickory Hollow Pkwy",
+                "city": "Antioch",
+                "state": "TN",
+                "zip": "37013",
+                "country": "United States"
+            }
+    }
+}
