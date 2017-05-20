@@ -12,8 +12,14 @@ app.controller("AddyListCtrl", function($scope, AddyFactory) {
 
 	getAddressesThenWriteToDom();
 
-
-	// delete item
+	$scope.deleteContactPressed = (id) => {
+		console.log("delete pressed");
+		AddyFactory.deleteContact(id).then(() => {
+			getAddressesThenWriteToDom();
+		}).catch((error) => {
+			console.log(error);
+		});
+	};
 
 	// input change
 

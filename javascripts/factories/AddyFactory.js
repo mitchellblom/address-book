@@ -63,11 +63,23 @@ app.factory("AddyFactory", function($http, $q, FIREBASE_CONFIG) {
         });
   };
 
+  let deleteContact = (addyId) => {
+    return $q((resolve, reject) => {
+      $http.delete(`${FIREBASE_CONFIG.databaseURL}/addresses/${addyId}.json`)
+        .then((results) => {
+              resolve(results);
+          }).catch((error) => {
+              reject(error);
+          });
+    });
+  };
+
   return {
       getAddressesFromFb:getAddressesFromFb,
       getSingleAddy:getSingleAddy,
       postNewContact:postNewContact,
-      editContact:editContact
+      editContact:editContact,
+      deleteContact:deleteContact
   };
 
 
