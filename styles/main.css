@@ -15,5 +15,9 @@ ul, li {
   min-height: 160px;
   min-width: 260px;
   background: no-repeat url("../images/card.png");
-  padding: 12px 0;
+  padding: 14px 0;
   font-weight: 700; }
+  .single-card ul {
+    margin-left: -15px; }
+  .single-card a {
+    margin-left: 215px; }
