@@ -21,7 +21,4 @@ app.controller("AddyListCtrl", function($scope, AddyFactory) {
 		});
 	};
 
-	// input change
-
-
 });

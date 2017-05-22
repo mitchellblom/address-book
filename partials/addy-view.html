@@ -1,8 +1,10 @@
-<ul>
-	<li>{{selectedAddy.given_name}} {{selectedAddy.surname}}</li>
-	<li>{{selectedAddy.class}}</li>
-	<li>{{selectedAddy.address}}</li>
-	<li>{{selectedAddy.city}}, {{selectedAddy.state}}, {{selectedAddy.zip}}</li>
-	<li>{{selectedAddy.country}}</li>
-</ul>
-<button class="btn btn-default"><a ng-href="#!/addy/edit/{{selectedAddy.id}}">Edit</a></button>
+<div class="single-card">
+	<ul>
+		<li>{{selectedAddy.given_name}} {{selectedAddy.surname}}</li>
+		<li>{{selectedAddy.class}}</li>
+		<li>{{selectedAddy.address}}</li>
+		<li>{{selectedAddy.city}}, {{selectedAddy.state}}, {{selectedAddy.zip}}</li>
+		<li>{{selectedAddy.country}}</li>
+	</ul>
+	<button class="btn btn-default pull-right"><a ng-href="#!/addy/edit/{{selectedAddy.id}}">Edit</a></button>
+</div>

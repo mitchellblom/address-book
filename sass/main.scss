@@ -1,3 +1,7 @@
+body {
+	background: url("http://brianinacio.ca/work/Sketchpad/images/desk_texture.png");
+}
+
 ul, li {
 	list-style-type: none;
 }
@@ -8,4 +12,13 @@ ul, li {
 
 .contactInListView {
 	height: 100px;
+}
+
+.single-card {
+	margin: auto;
+	min-height: 160px;
+	min-width: 260px;
+	background: no-repeat url("../images/card.png");
+	padding: 12px 0;
+	font-weight: 700;
 }
