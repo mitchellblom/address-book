@@ -33,19 +33,23 @@ app.config(function($routeProvider){
         })
         .when('/addy/list', {
             templateUrl: 'partials/addy-list.html',
-            controller: 'AddyListCtrl'
+            controller: 'AddyListCtrl',
+            resolve: {isAuth}
         })
         .when('/addy/new', {
             templateUrl: 'partials/addy-new.html',
-            controller: 'AddyNewCtrl'
+            controller: 'AddyNewCtrl',
+            resolve: {isAuth}
         })
         .when('/addy/view/:id', {
             templateUrl: 'partials/addy-view.html',
-            controller: 'AddyViewCtrl'
+            controller: 'AddyViewCtrl',
+            resolve: {isAuth}
         })
         .when('/addy/edit/:id', {
             templateUrl: 'partials/addy-new.html',
-            controller: 'AddyEditCtrl'
+            controller: 'AddyEditCtrl',
+            resolve: {isAuth}
         })
         .when('/logout', {
             templateUrl: 'partials/auth.html',
