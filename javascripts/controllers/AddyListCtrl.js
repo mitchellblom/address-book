@@ -1,12 +1,12 @@
-app.controller("AddyListCtrl", function($scope, AddyFactory) {	
+app.controller("AddyListCtrl", function($rootScope, $scope, AddyFactory) {	
 
 	$scope.addresses = [];
 
 	let getAddressesThenWriteToDom = () => {
-		AddyFactory.getAddressesFromFb().then((addresses) => {
+		AddyFactory.getAddressesFromFb($rootScope.user.uid).then((addresses) => {
 			$scope.addresses = addresses;
 		}).catch((error) => {
-			console.log("get error", error);
+			console.log(error);
 		});
 	};
 

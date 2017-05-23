@@ -1,18 +1,23 @@
 app.factory("AddyFactory", function($http, $q, FIREBASE_CONFIG) {
 
-	let getAddressesFromFb = () => {
+	let getAddressesFromFb = (userId) => {
+    console.log("inside getAddressesFromFb :", userId);
 		let addresses = [];
 		return $q((resolve, reject) => {
-			$http.get(`${FIREBASE_CONFIG.databaseURL}/addresses.json`)
+      $http.get(`${FIREBASE_CONFIG.databaseURL}/addresses.json`) // ?orderBy="uid"&equalTo="${userId}"
 				.then((fbAddys) => {
 					var addressCollection = fbAddys.data;
-					Object.keys(addressCollection).forEach((key) => {
-						addressCollection[key].id = key;
-						addresses.push(addressCollection[key]);
-					});
-					resolve(addresses);
-				})
-				.catch((error) => {
+          if(addressCollection.length !== null) {
+  					Object.keys(addressCollection).forEach((key) => {
+              console.log("inside for each", addressCollection);
+              console.log("addresses", addresses);
+              addressCollection[key].id = key;
+              addresses.push(addressCollection[key]);
+            });
+          }
+          resolve(addresses);
+        })
+        .catch((error) => {
 					reject(error);
 				});
 		});
