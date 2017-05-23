@@ -1,7 +1,8 @@
-app.controller("AddyNewCtrl", function($http, $location, $q, $scope, FIREBASE_CONFIG, AddyFactory){
+app.controller("AddyNewCtrl", function($http, $location, $q, $rootScope, $scope, FIREBASE_CONFIG, AddyFactory){
 
 	$scope.addNewContact = () => {
-		$scope.newContact.uid = $rootScope.user.uid;					//////////////// is not putting uid on new written object
+		console.log("user id in rootscope: ", $rootScope.user.uid);
+		$scope.newContact.uid = $rootScope.user.uid;
 		AddyFactory.postNewContact($scope.newContact).then(() => {
 			$scope.newContact = {};
 			$location.url("/addy/list");
