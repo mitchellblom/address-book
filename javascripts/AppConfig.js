@@ -4,6 +4,10 @@ app.run(function(FIREBASE_CONFIG) {
 
 app.config(function($routeProvider){
     $routeProvider
+        .when('/auth', {
+            templateUrl: 'partials/auth.html',
+            controller: 'AuthCtrl'
+        })
         .when('/addy/list', {
             templateUrl: 'partials/addy-list.html',
             controller: 'AddyListCtrl'
@@ -20,5 +24,10 @@ app.config(function($routeProvider){
             templateUrl: 'partials/addy-new.html',
             controller: 'AddyEditCtrl'
         })
-        .otherwise('addy/list');
+        .when('/logout', {
+            templateUrl: 'partials/auth.html',
+            controller: 'AuthCtrl',
+            resolve: {isAuth}
+        })
+        .otherwise('auth');
 });
