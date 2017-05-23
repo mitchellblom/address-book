@@ -45,13 +45,14 @@ app.factory("AddyFactory", function($http, $q, FIREBASE_CONFIG) {
     return $q((resolve, reject) => {
       $http.put(`${FIREBASE_CONFIG.databaseURL}/addresses/${item.id}.json`, 
         JSON.stringify({
-        	given_name: item.given_name,
-        	surname: item.surname,
           address: item.address,
           city: item.city,
+          country: item.country,
+          given_name: item.given_name,
           state: item.state,
-          zip: item.zip,
-          country: item.country
+          surname: item.surname,
+          uid: item.uid,
+          zip: item.zip
         })
     	)
       	.then((results) => {
@@ -80,7 +81,5 @@ app.factory("AddyFactory", function($http, $q, FIREBASE_CONFIG) {
       editContact:editContact,
       deleteContact:deleteContact
   };
-
-
 
 });
