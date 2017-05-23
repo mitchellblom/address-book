@@ -1,44 +1,58 @@
 {
-    "addresses": {
-            "address0": {
-                "given_name": "Alejandro",
-                "surname": "Cienfuegos",
-                "relationship": "Friend",
-                "address": "1234 1st Ave S",
-                "city": "London",
-                "state": "Greater London",
-                "zip": "09876",
-                "country": "United Kingdom"
-            },
-            "address1": {
-                "given_name": "Diana",
-                "surname": "Blom",
-                "relationship": "Family",
-                "address": "5432 Lemmon Ave",
-                "city": "Dallas",
-                "state": "TX",
-                "zip": "75022",
-                "country": "United States"
-            },
-            "address2": {
-                "given_name": "Marco",
-                "surname": "Augliera",
-                "relationship": "Friend",
-                "address": "1001 Fratelli Ct",
-                "city": "Trento",
-                "state": "Trentino",
-                "zip": "LK987",
-                "country": "Italy"
-            },
-            "address3": {
-                "given_name": "Sam",
-                "surname": "Sonite",
-                "relationship": "Other",
-                "address": "5255 Hickory Hollow Pkwy",
-                "city": "Antioch",
-                "state": "TN",
-                "zip": "37013",
-                "country": "United States"
-            }
+  "addresses" : {
+    "address0" : {
+      "address" : "1234 1st Ave S",
+      "city" : "London",
+      "country" : "United Kingdom",
+      "given_name" : "Alejandro",
+      "relationship" : "Friend",
+      "state" : "Greater London",
+      "surname" : "Cienfuegos",
+      "uid" : "qlaWHZq21eU2tt63nznNc6oMQqh1",
+      "zip" : "09876"
+    },
+    "address1" : {
+      "address" : "5432 Lemmon Ave",
+      "city" : "Dallas",
+      "country" : "United States",
+      "given_name" : "Diana",
+      "relationship" : "Family",
+      "state" : "TX",
+      "surname" : "Blom",
+      "uid" : "U1QDEX9wjtNlnX2zVjDQQB9cz2f2",
+      "zip" : "75022"
+    },
+    "address2" : {
+      "address" : "1001 Fratelli Ct",
+      "city" : "Trento",
+      "country" : "Italy",
+      "given_name" : "Marco",
+      "relationship" : "Friend",
+      "state" : "Trentino",
+      "surname" : "Augliera",
+      "uid" : "qlaWHZq21eU2tt63nznNc6oMQqh1",
+      "zip" : "LK987"
+    },
+    "address3" : {
+      "address" : "5255 Hickory Hollow Pkwy",
+      "city" : "Antioch",
+      "country" : "United States",
+      "given_name" : "Sam",
+      "relationship" : "Other",
+      "state" : "TN",
+      "surname" : "Sonite",
+      "uid" : "U1QDEX9wjtNlnX2zVjDQQB9cz2f2",
+      "zip" : "37013"
     }
+  },
+  "users" : {
+    "-KkqH-_c4xRlQ_ExMR5D" : {
+      "uid" : "qlaWHZq21eU2tt63nznNc6oMQqh1",
+      "username" : "a"
+    },
+    "-KkqHlOoVg1AFpqz5_LM" : {
+      "uid" : "U1QDEX9wjtNlnX2zVjDQQB9cz2f2",
+      "username" : "b"
+    }
+  }
 }
