@@ -12,11 +12,14 @@ ul, li {
 
 .contactInListView {
 	width: 85%;
+	padding: 4%;
 	background-color: white;
 	box-shadow: 0 0 30px black;
+	border-radius: 5%;
 }
 
 .single-card {
+	// text-size: 2em;
 	margin: auto;
 	min-height: 160px;
 	min-width: 260px;

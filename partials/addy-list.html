@@ -1,6 +1,6 @@
 <div class="contactInListView" ng-repeat="address in addresses">
 	<ul class="row">
-		<div class="col-sm-4"><a ng-href="#!/addy/view/{{address.id}}">{{address.given_name}} {{address.surname}}</a></div>
-		<div class="col-sm-1"><button class="btn btn-danger" ng-click="deleteContactPressed(address.id)">x</button></div>
+		<div class="col-sm-9"><a ng-href="#!/addy/view/{{address.id}}">{{address.given_name}} {{address.surname}}</a></div>
+		<div class="col-sm-1"><button class="btn btn-danger fa fa-trash-o" ng-click="deleteContactPressed(address.id)"></button></div>
 	</ul>
 </div>

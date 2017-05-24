@@ -13,7 +13,6 @@ app.controller("AddyListCtrl", function($rootScope, $scope, AddyFactory) {
 	getAddressesThenWriteToDom();
 
 	$scope.deleteContactPressed = (id) => {
-		console.log("delete pressed");
 		AddyFactory.deleteContact(id).then(() => {
 			getAddressesThenWriteToDom();
 		}).catch((error) => {
