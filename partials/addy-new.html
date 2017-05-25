@@ -17,9 +17,9 @@
 		<div class="form-group">
 			<label>Relationship</label>
 			<select name="Relationship" ng-model="newContact.relationship">
-				<option value="Friend">Friend</option> 
-			 	<option value="Family">Family</option>
-			  <option value="Other">Other</option>
+				<option ng-value="Friend" ng-selected="newContact.relationship = Friend">Friend</option> 
+			 	<option ng-value="Family" ng-selected="newContact.relationship = Family">Family</option>
+			  <option ng-value="Other" ng-selected="newContact.relationship = Other">Other</option>
 			</select>
 		</div>
 
