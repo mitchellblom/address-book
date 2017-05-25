@@ -1,5 +1,6 @@
 body {
 	background: url("http://brianinacio.ca/work/Sketchpad/images/desk_texture.png");
+	font-family: 'Raleway', sans-serif;
 }
 
 ul, li {
@@ -15,11 +16,11 @@ ul, li {
 	padding: 4%;
 	background-color: white;
 	box-shadow: 0 0 30px black;
-	border-radius: 5%;
+	border-radius: 5px;
 }
 
 .single-card {
-	// text-size: 2em;
+	text-size: 2em;
 	margin: auto;
 	min-height: 160px;
 	min-width: 260px;
@@ -36,3 +37,21 @@ ul, li {
 	}
 
 }
+
+.header-font {
+	font-family: 'Kumar One', cursive;
+	font-size: 2em;
+}
+
+.navbar {
+	background-color: rgba(255, 255, 255, 0.3);
+	a { 
+		color: white;
+	}
+	a:hover {
+		color: #424242
+	}
+}
+
+
+
