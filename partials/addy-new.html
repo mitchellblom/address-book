@@ -16,13 +16,10 @@
     </div>
 		<div class="form-group">
 			<label>Relationship</label>
-			<select name="Relationship" ng-model="newContact.relationship">
-				<option ng-value="Friend" ng-selected="newContact.relationship = Friend">Friend</option> 
-			 	<option ng-value="Family" ng-selected="newContact.relationship = Family">Family</option>
-			  <option ng-value="Other" ng-selected="newContact.relationship = Other">Other</option>
-			</select>
+      <select name="Relationship" ng-model="newContact.relationship">
+        <option ng-value="option.rel" ng-repeat="option in relationship_options" ng-selected="newContact.relationship == option.rel">{{option.rel}}</option> 
+      </select>
 		</div>
-
     <button class="btn btn-default" ng-click="addNewContact()">Submit</button>
   </form>
 

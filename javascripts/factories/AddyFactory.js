@@ -54,7 +54,8 @@ app.factory("AddyFactory", function($http, $q, FIREBASE_CONFIG) {
           state: item.state,
           surname: item.surname,
           uid: item.uid,
-          zip: item.zip
+          zip: item.zip,
+          relationship: item.relationship
         })
     	)
       	.then((results) => {
