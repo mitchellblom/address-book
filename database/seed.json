@@ -76,5 +76,19 @@
       "uid" : "U1QDEX9wjtNlnX2zVjDQQB9cz2f2",
       "username" : "b"
     }
+  },
+  "relationships" : {
+    "rel0" : {
+      "id" : "0",
+      "type" : "Friend"
+    },
+    "rel1" : {
+      "id" : "1",
+      "type" : "Family"
+    },
+    "rel2" : {
+      "id" : "2",
+      "type" : "Other"
+    }
   }
 }

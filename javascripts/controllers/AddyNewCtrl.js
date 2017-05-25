@@ -1,9 +1,9 @@
 app.controller("AddyNewCtrl", function($http, $location, $q, $rootScope, $scope, FIREBASE_CONFIG, AddyFactory){
 
 	$scope.relationship_options = [
-        {'id': 0, 'rel': 'Family'},
-        {'id': 1, 'rel': 'Friend'},
-        {'id': 2, 'rel': 'Other'},
+        {'id': 0, 'type': 'Family'},
+        {'id': 1, 'type': 'Friend'},
+        {'id': 2, 'type': 'Other'},
     ];
 
 	$scope.addNewContact = () => {

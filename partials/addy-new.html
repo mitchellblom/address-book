@@ -17,7 +17,7 @@
 		<div class="form-group">
 			<label>Relationship</label>
       <select name="Relationship" ng-model="newContact.relationship">
-        <option ng-value="option.rel" ng-repeat="option in relationship_options" ng-selected="newContact.relationship == option.rel">{{option.rel}}</option> 
+        <option ng-value="option.type" ng-repeat="option in relationship_options" ng-selected="newContact.relationship == option.type">{{option.type}}</option> 
       </select>
 		</div>
     <button class="btn btn-default" ng-click="addNewContact()">Submit</button>

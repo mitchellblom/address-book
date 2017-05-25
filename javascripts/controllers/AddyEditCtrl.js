@@ -1,16 +1,23 @@
 app.controller("AddyEditCtrl", function($location, $routeParams, $scope, AddyFactory){
     $scope.newContact = {};
+    $scope.relationship_options = []; 
 
-    $scope.relationship_options = [
-        {'id': 0, 'rel': 'Family'},
-        {'id': 1, 'rel': 'Friend'},
-        {'id': 2, 'rel': 'Other'},
-    ];
+    RelFactory.getRelationshipList().then((results) => {
+        $scope.relationship_options = results.data;
+    }).catch((error) => {
+        console.log(error);
+    });
+
+    // $scope.relationship_options = [                              // switch commented blocks for control testing
+    //     {'id': 0, 'type': 'Family'},
+    //     {'id': 1, 'type': 'Friend'},
+    //     {'id': 2, 'type': 'Other'},
+    // ];
 
     AddyFactory.getSingleAddy($routeParams.id).then((results) => {
     	$scope.newContact = results.data;
     }).catch((error) => {
-    	console.log("getSingleItem error", error);
+    	console.log(error);
     });
 
     $scope.addNewContact = () => {
