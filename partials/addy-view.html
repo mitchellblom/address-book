@@ -5,6 +5,7 @@
 		<li>{{selectedAddy.address}}</li>
 		<li>{{selectedAddy.city}}, {{selectedAddy.state}}, {{selectedAddy.zip}}</li>
 		<li>{{selectedAddy.country}}</li>
+		<li>Birthday: {{selectedAddy.birthday | date: 'shortDate'}}</div>
 	</ul>
 	<a class="fa fa-pencil" aria-hidden="true" ng-href="#!/addy/edit/{{selectedAddy.id}}" ></a>
 </div>

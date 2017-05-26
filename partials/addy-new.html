@@ -23,6 +23,14 @@
         <option ng-value="option.type" ng-repeat="option in rel_options" ng-selected="rel_options.relationship == option.type">{{option.type}}</option>
       </select> -->
 		</div>
+    <p class="input-group">
+      <input type="date" class="form-control" uib-datepicker-popup ng-model="newContact.birthday" is-open="isOpened2" min-date="minDate" max-date="maxDate" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" />
+      <span class="input-group-btn">
+        <button type="button" class="btn btn-default" ng-click="isOpened2 = !isOpened2">
+          <i class="glyphicon glyphicon-calendar"></i>
+        </button>
+      </span>
+    </p>
     <button class="btn btn-default" ng-click="addNewContact()">Submit</button>
   </form>
 </div>

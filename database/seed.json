@@ -2,6 +2,7 @@
   "addresses" : {
     "address0" : {
       "address" : "1234 1st Ave S",
+      "birthday" : "2017-05-23T05:00:00.000Z",
       "city" : "London",
       "country" : "United Kingdom",
       "given_name" : "Alejandro",
@@ -13,6 +14,7 @@
     },
     "address1" : {
       "address" : "5432 Lemmon Ave",
+      "birthday" : "2017-05-23T05:00:00.000Z",
       "city" : "Dallas",
       "country" : "United States",
       "given_name" : "Diana",
@@ -24,6 +26,7 @@
     },
     "address2" : {
       "address" : "1001 Fratelli Ct",
+      "birthday" : "2017-05-23T05:00:00.000Z",
       "city" : "Trento",
       "country" : "Italy",
       "given_name" : "Marco",
@@ -35,6 +38,7 @@
     },
     "address3" : {
       "address" : "5255 Hickory Hollow Pkwy",
+      "birthday" : "2017-05-23T05:00:00.000Z",
       "city" : "Antioch",
       "country" : "United States",
       "given_name" : "Sam",
@@ -46,6 +50,7 @@
     },
     "address4" : {
       "address" : "7654 Main St",
+      "birthday" : "2017-05-23T05:00:00.000Z",
       "city" : "Aranjuez",
       "country" : "Spain",
       "given_name" : "Grace",
@@ -57,6 +62,7 @@
     },
     "address5" : {
       "address" : "1411 Caldwell Park Dr",
+      "birthday" : "2017-05-23T05:00:00.000Z",
       "city" : "Nashville",
       "country" : "United States",
       "given_name" : "Travis",
