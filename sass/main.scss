@@ -39,8 +39,8 @@ ul, li {
 }
 
 .header-font {
-	font-family: 'Kumar One', cursive;
-	font-size: 2em;
+	font-family: 'Archivo Black', Impact, sans-serif;
+	font-size: 3em;
 }
 
 .navbar {
@@ -53,5 +53,16 @@ ul, li {
 	}
 }
 
+.footer {
+	color: white;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  text-align: center;
+}
 
+// .rolo {
+// 	display: inline-block;
+// }
 
