@@ -1,8 +1,11 @@
 <div class="radio-group">
 <!-- 	ng-show All option -->
-	<label class="radio-inline"><input type="radio" ng-model="">Options will go here</label>   <!-- needs ng model -->
+	<label class="radio-inline"><input type="radio" name="rel" ng-model="relType">All</label>
+	<label class="radio-inline"><input type="radio" name="rel" ng-model="relType" value="Family">Family</label>
+	<label class="radio-inline"><input type="radio" name="rel" ng-model="relType" value="Friend">Friend</label>
+	<label class="radio-inline"><input type="radio" name="rel" ng-model="relType" value="Other">Other</label>
 </div>
-<div class="contactInListView" ng-repeat="address in addresses">
+<div class="contactInListView" ng-repeat="address in addresses | filter: {'relationship' : relType}">
 	<ul class="row">
 		<div class="col-sm-9"><a ng-href="#!/addy/view/{{address.id}}">{{address.given_name}} {{address.surname}}</a></div>
 		<div class="col-sm-1"><button class="btn btn-danger fa fa-trash-o" ng-click="deleteContactPressed(address.id)"></button></div>
