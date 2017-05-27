@@ -1,15 +1,7 @@
 app.controller("AddyEditCtrl", function($location, $routeParams, $scope, AddyFactory, RelFactory){
     $scope.newContact = {};
-    // $scope.rel_options = []; 
 
-    // RelFactory.getRelList().then((results) => {
-    //     console.log(results.data);
-    //     $scope.rel_options = results.data;
-    // }).catch((error) => {
-    //     console.log(error);
-    // });
-
-    $scope.relationship_options = [                              // switch commented blocks for control testing
+    $scope.relationship_options = [
         {'id': 0, 'type': 'Family'},
         {'id': 1, 'type': 'Friend'},
         {'id': 2, 'type': 'Other'}
