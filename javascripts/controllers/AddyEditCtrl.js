@@ -9,7 +9,7 @@ app.controller("AddyEditCtrl", function($location, $routeParams, $scope, AddyFac
 
     AddyFactory.getSingleAddy($routeParams.id).then((results) => {
     	$scope.newContact = results.data;
-        results.data.dueDate = new Date(results.data.dueDate);
+        results.data.birthday = new Date(results.data.birthday);
     }).catch((error) => {
     	console.log(error);
     });
