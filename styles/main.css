@@ -9,6 +9,7 @@ ul, li {
   width: 300px; }
 
 .contactInListView {
+  font-size: 1.2em;
   width: 100%;
   padding: 4%;
   background-color: white;
@@ -16,17 +17,16 @@ ul, li {
   border-radius: 5px; }
 
 .single-card {
-  text-size: 2em;
   margin: auto;
-  min-height: 160px;
+  min-height: 250px;
   min-width: 260px;
-  background: no-repeat url("../images/card.png");
+  background: no-repeat url("../images/card2.png");
   padding: 14px 0;
-  font-weight: 700; }
-  .single-card ul {
-    margin-left: -15px; }
+  font-size: 1.5em;
+  font-weight: bold; }
   .single-card a {
-    margin-left: 215px; }
+    float: right;
+    margin-right: 115px; }
 
 .header-font {
   font-family: 'Archivo Black', Impact, sans-serif;

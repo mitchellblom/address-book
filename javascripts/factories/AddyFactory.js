@@ -48,6 +48,7 @@ app.factory("AddyFactory", function($http, $q, FIREBASE_CONFIG) {
       $http.put(`${FIREBASE_CONFIG.databaseURL}/addresses/${item.id}.json`, 
         JSON.stringify({
           address: item.address,
+          birthday: item.birthday,
           city: item.city,
           country: item.country,
           given_name: item.given_name,
