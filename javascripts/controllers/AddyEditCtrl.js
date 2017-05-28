@@ -1,4 +1,4 @@
-app.controller("AddyEditCtrl", function($location, $routeParams, $scope, AddyFactory, RelFactory){
+app.controller("AddyEditCtrl", function($location, $routeParams, $scope, AddyFactory){
     $scope.newContact = {};
 
     $scope.relationship_options = [

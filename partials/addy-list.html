@@ -1,16 +1,13 @@
-<!-- <div class="inline col-sm-4"> -->
-	<div class="input-group col-sm-4 col-sm-offset-4">
-		<!-- <label>Relationship:</label> -->
-		<input type="text" class="form-control" placeholder="Search Contacts" aria-describedby="basic-addon1" ng-model="searchText">
-	</div>
-<!-- </div> -->
+<div class="input-group col-sm-4 col-sm-offset-4">
+	<input type="text" class="form-control" placeholder="Search Contacts" aria-describedby="basic-addon1" ng-model="searchText">
+</div>
 <div class="radio-group">
 	<label class="radio-inline"><input type="radio" name="rel" ng-model="relType">All</label>
 	<label class="radio-inline"><input type="radio" name="rel" ng-model="relType" value="Family">Family</label>
 	<label class="radio-inline"><input type="radio" name="rel" ng-model="relType" value="Friend">Friend</label>
 	<label class="radio-inline"><input type="radio" name="rel" ng-model="relType" value="Other">Other</label>
 </div>
-<div class="contactInListView" ng-repeat="address in addresses | filter: {'relationship' : relType} | filter: searchText">
+<div class="contactInListView" ng-repeat="address in addresses | filter: {'relationship' : relType} | filter: searchText | orderBy:'given_name'">
 	<ul class="row">
 		<div class="col-sm-9"><a ng-href="#!/addy/view/{{address.id}}">{{address.given_name}} {{address.surname}}</a></div>
 		<div class="col-sm-1"><button class="btn btn-danger fa fa-trash-o" ng-click="deleteContactPressed(address.id)"></button></div>
