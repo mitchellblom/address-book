@@ -53,17 +53,25 @@ ul, li {
 	}
 }
 
+.radio-group {
+	text-align: center;
+	margin: 15px;
+	color: white;
+}
+
 .footer {
 	color: white;
-  position: absolute;
+  margin-top: 50px;
   bottom: 0;
   width: 100%;
   height: 60px;
   text-align: center;
 }
 
-.radio-group {
-	text-align: center;
-	padding: 25px;
+label, h3 {
 	color: white;
+}
+
+.inline {
+	display: inline;
 }
