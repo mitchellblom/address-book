@@ -1,18 +1,20 @@
 app.factory("AddyFactory", function($http, $q, FIREBASE_CONFIG) {
 
-	let getAddressesFromFb = () => {
+	let getAddressesFromFb = (userId) => {
 		let addresses = [];
 		return $q((resolve, reject) => {
-			$http.get(`${FIREBASE_CONFIG.databaseURL}/addresses.json`)
+      $http.get(`${FIREBASE_CONFIG.databaseURL}/addresses.json?orderBy="uid"&equalTo="${userId}"`) // ?orderBy="uid"&equalTo="${userId}"
 				.then((fbAddys) => {
 					var addressCollection = fbAddys.data;
-					Object.keys(addressCollection).forEach((key) => {
-						addressCollection[key].id = key;
-						addresses.push(addressCollection[key]);
-					});
-					resolve(addresses);
-				})
-				.catch((error) => {
+          if (addressCollection.length !== null) {
+  					Object.keys(addressCollection).forEach((key) => {
+              addressCollection[key].id = key;
+              addresses.push(addressCollection[key]);
+            });
+          }
+          resolve(addresses);
+        })
+        .catch((error) => {
 					reject(error);
 				});
 		});
@@ -45,13 +47,16 @@ app.factory("AddyFactory", function($http, $q, FIREBASE_CONFIG) {
     return $q((resolve, reject) => {
       $http.put(`${FIREBASE_CONFIG.databaseURL}/addresses/${item.id}.json`, 
         JSON.stringify({
-        	given_name: item.given_name,
-        	surname: item.surname,
           address: item.address,
+          birthday: item.birthday,
           city: item.city,
+          country: item.country,
+          given_name: item.given_name,
           state: item.state,
+          surname: item.surname,
+          uid: item.uid,
           zip: item.zip,
-          country: item.country
+          relationship: item.relationship
         })
     	)
       	.then((results) => {
@@ -80,7 +85,5 @@ app.factory("AddyFactory", function($http, $q, FIREBASE_CONFIG) {
       editContact:editContact,
       deleteContact:deleteContact
   };
-
-
 
 });
